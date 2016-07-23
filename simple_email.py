@@ -2,14 +2,19 @@ import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
+##############################################
+# You fill out the following variables 
+# and let Python do the rest...
 fromaddr = "andoverace10@gmail.com"
 password = "gobigblue"
 toaddr = "kjiang@andover.edu"
 subject = "Sample Subject"
 body = "Sample body"
+##############################################
 
+# the rest of the code
 msg = MIMEMultipart()
-msg['From'] = "fromaddr"
+msg['From'] = fromaddr
 msg['To'] = toaddr
 msg['Subject'] = subject
  
