@@ -12,6 +12,7 @@ subject = "Sample Subject"
 body = "Sample body"
 ##############################################
 
+print "Sending email from %s to %s..." % (fromaddr, toaddr)
 # the rest of the code
 msg = MIMEMultipart()
 msg['From'] = fromaddr
@@ -26,3 +27,5 @@ server.login(fromaddr, password)
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
+
+print "Email sent!"
